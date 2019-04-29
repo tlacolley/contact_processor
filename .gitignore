@@ -1,0 +1,8 @@
+node_modules/
+package-lock.json
+haa__project/extra_settings.py
+*.pyc
+*.sass-cache/
+media/
+*.zip
+*.map
