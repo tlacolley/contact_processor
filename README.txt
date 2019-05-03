@@ -87,23 +87,45 @@ To render the field I use here the render_field form Contact-form
 
 
 
-For Using SendGrid 
-
-
-use the SendGrid STMP
-
-
-Check the path in the URLS 
 
 
 
 
+For Using SendGrid SMTP, Official Documentation ( links )
+
+At the end of setting.py change or add 
+
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_USE_TLS = True  
+EMAIL_HOST = 'smtp.sendgrid.net'  
+EMAIL_PORT = 587  
+EMAIL_HOST_USER = 'apikey'  # this is SendGrid username don't change it
+
+
+For the EMAIL_HOST_PASSWORD is better to used an variable in an other files and import it just before 
+
+from project.extra_settings import *
+
+EMAIL_HOST_PASSWORD = '[Your scripted key here / my variable api_key_code from extra_settings.py ]'   # set environ yourself 
+Put the Apikey generate by SendGrid not in Base64
+
+
+ADMINS = (
+    ('[Yourname]', 'apikey'),   # email will be sent to your_email
+)
+
+MANAGERS = ADMINS
 
 
 
-Create a form where you want, like in the footer.html 
 
 
-   
+
+
+
+
+
+
 
 

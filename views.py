@@ -7,8 +7,12 @@ from django.views.generic import TemplateView
 # import the form from django-contact-form? 
 from contact_form.forms import ContactForm 
 
-from django.http import HttpResponse
-
 # Create your views here.
+
+
+
+
+
+
 
 
